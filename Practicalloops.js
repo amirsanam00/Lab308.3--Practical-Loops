@@ -40,26 +40,67 @@ for (let x = 1; x <= 100; x++) {
     // Continuing with the example above, if n is equal to 4, your loop should log 5. Similarly, if n is 5, it should log 7, and if n is 9, it should log 11. Test your loop with higher numbers and reference an online prime number table to determine the accuracy of your code.
     // Be careful! If you set n to a number too large, your loop could take a long time to process.
 
-let n = prompt ("Enter Number") // Declare an arbitrary number, n.
+// let n = prompt ("Enter Number") // Declare an arbitrary number, n.
 
-let nextPrime = 2 
+// let nextPrime = 2 
 
- while (true) {
- let Prime = true;
+//  while (true) {
+//  let Prime = true;
 
-    for (let n = 2; n < nextPrime; n++) {
-        if (nextPrime % n === 0) {
-            Prime = false;
-            break;
-        }  
-    }
-        if (Prime) {
-            console.log (`It is Prime Number`);
-            break;
-        }
-        nextPrime++;
-    }
+//     for (let n = 2; n < nextPrime; n++) {
+//         if (nextPrime % n === 0) {
+//             Prime = false;
+//             break;
+//         }  
+//     }
+//         if (Prime) {
+//             console.log (`It is Prime Number`);
+//             break;
+//         }
+//         nextPrime++;
+//     }
    
+// =======================================
+// Part 3
+
+// create a variable to hold given string
+// const givenString =  "42, Bruce, Knight, 41/n57, Bob, Fry Cook, 19"
+
+//iterate through givenString character-by-character
+// while iterating through, look at each character to see if it is a letter, number, comma, or backslash
+// if the character is a letter, number, or comma, add to the row (variable)
+// if the character is a slash, then check if the next letter is an "n" or "r"
+//     if yes:
+//          console.log out the row
+//     if no:
+//          then continue doing the same thing as before
+
+/*
+1. Store the input
+const givenInput = "
+"
+2. I need to create variables to hold information
+3. I need to assign the variables initial values
+
+1. Store input
+2. create variables
+*/
+
+let csv = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+let cell = ""
+
+for (let i = 0; i < csv.length; i++) {
+    const char = csv[i]; 
     
-// If (Number) 
-//     console.log ("It is Prime")
+    if (char === " ,") { 
+        console.log(cell);
+        cell ="";
+    } else if (char === "\n") { 
+        console.log(cell);
+    } else {
+        cell += char;
+        }
+    }
+    
+    
